@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Appliances</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Header and Footer styles (same as previous examples) */
+    /* ... */
+
+    /* Main Content Styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      color: #9b59b6;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #8e44ad;
+    }
+
+    .featured-products {
+      margin-top: 40px;
+    }
+
+    .featured-products h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .featured-products .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .appliance-categories {
+      margin-top: 40px;
+    }
+
+    .appliance-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .appliance-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .appliance-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .appliance-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .appliance-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .appliance-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .appliance-features {
+      margin-top: 40px;
+    }
+
+    .appliance-features h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .appliance-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .appliance-feature {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .appliance-feature img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .appliance-feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .appliance-feature p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content (same as previous examples) -->
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Appliances</h1>
+        <p>Discover a wide range of appliances to enhance your home and lifestyle.</p>
+      </div>
+      <div class="hero-image">
+        <img src="appliances-image.jpg" alt="Appliances">
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="product-image-1.jpg" alt="Refrigerator">
+        <h3>Refrigerator</h3>
+        <div class="price">$999.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-2.jpg" alt="Washing Machine">
+        <h3>Washing Machine</h3>
+        <div class="price">$699.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-3.jpg" alt="Oven">
+        <h3>Oven</h3>
+        <div class="price">$499.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-4.jpg" alt="Dishwasher">
+        <h3>Dishwasher</h3>
+        <div class="price">$399.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-5.jpg" alt="Air Conditioner">
+        <h3>Air Conditioner</h3>
+        <div class="price">$799.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-6.jpg" alt="Microwave Oven">
+        <h3>Microwave Oven</h3>
+        <div class="price">$149.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-7.jpg" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <div class="price">$99.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-8.jpg" alt="Blender">
+        <h3>Blender</h3>
+        <div class="price">$79.99</div>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-image-9.jpg" alt="Smart Refrigerator">
+          <h3>Smart Refrigerator</h3>
+          <div class="price">$1,299.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-10.jpg" alt="Robotic Vacuum Cleaner">
+          <h3>Robotic Vacuum Cleaner</h3>
+          <div class="price">$399.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-11.jpg" alt="Smart Air Purifier">
+          <h3>Smart Air Purifier</h3>
+          <div class="price">$249.99</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="appliance-categories">
+      <h2>Appliance Categories</h2>
+      <div class="appliance-categories-grid">
+        <div class="appliance-category">
+          <img src="kitchen-appliances-icon.png" alt="Kitchen Appliances">
+          <h3>Kitchen Appliances</h3>
+          <p>Discover a wide range of kitchen appliances to make your cooking and meal preparation easier.</p>
+        </div>
+        <div class="appliance-category">
+          <img src="laundry-appliances-icon.png" alt="Laundry Appliances">
+          <h3>Laundry Appliances</h3>
+          <p>Explore our selection of high-efficiency washing machines and dryers to keep your clothes clean and fresh.</p>
+        </div>
+        <div class="appliance-category">
+          <img src="climate-appliances-icon.png" alt="Climate Appliances">
+          <h3>Climate Appliances</h3>
+          <p>Maintain a comfortable temperature in your home with our selection of air conditioners and heaters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="appliance-features">
+      <h2>Appliance Features</h2>
+      <div class="appliance-features-grid">
+        <div class="appliance-feature">
+          <img src="energy-efficiency-icon.png" alt="Energy Efficiency">
+          <div>
+            <h3>Energy Efficiency</h3>
+            <p>Our appliances are designed to be energy-efficient, helping you save on utility bills and reduce your carbon footprint.</p>
+          </div>
+        </div>
+        <div class="appliance-feature">
+          <img src="smart-technology-icon.png" alt="Smart Technology">
+          <div>
+            <h3>Smart Technology</h3>
+            <p>Many of our appliances feature smart technology, allowing you to control and monitor them remotely from your smartphone or voice assistant.</p>
+          </div>
+        </div>
+        <div class="appliance-feature">
+          <img src="durable-design-icon.png" alt="Durable Design">
+          <div>
+            <h3>Durable Design</h3>
+            <p>Our appliances are built to last, with high-quality materials and robust construction to ensure long-lasting performance.</p>
+          </div>
+        </div>
+        <div class="appliance-feature">
+          <img src="user-friendly-icon.png" alt="User-Friendly">
+          <div>
+            <h3>User-Friendly</h3>
+            <p>Our appliances are designed with intuitive controls and features to make them easy to use and navigate, even for the tech-savvy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content (same as previous examples) -->
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>m

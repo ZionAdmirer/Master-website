@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Sports and Outdoors</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Header and Footer styles (same as previous examples) */
+    /* ... */
+
+    /* Main Content Styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      color: #9b59b6;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #8e44ad;
+    }
+
+    .featured-products {
+      margin-top: 40px;
+    }
+
+    .featured-products h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .featured-products .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sports-categories {
+      margin-top: 40px;
+    }
+
+    .sports-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .sports-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .sports-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .sports-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .sports-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sports-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .outdoor-categories {
+      margin-top: 40px;
+    }
+
+    .outdoor-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .outdoor-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .outdoor-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .outdoor-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .outdoor-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .outdoor-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .sports-features {
+      margin-top: 40px;
+    }
+
+    .sports-features h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .sports-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .sports-feature {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .sports-feature img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .sports-feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sports-feature p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content (same as previous examples) -->
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Sports and Outdoors</h1>
+        <p>Explore our selection of sports and outdoor equipment and gear.</p>
+      </div>
+      <div class="hero-image">
+        <img src="sports-and-outdoors-image.jpg" alt="Sports and Outdoors">
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="product-image-1.jpg" alt="Treadmill">
+        <h3>Treadmill</h3>
+        <div class="price">$799.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-2.jpg" alt="Bicycle">
+        <h3>Bicycle</h3>
+        <div class="price">$499.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-3.jpg" alt="Camping Gear">
+        <h3>Camping Gear</h3>
+        <div class="price">$199.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-4.jpg" alt="Fishing Rod">
+        <h3>Fishing Rod</h3>
+        <div class="price">$79.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-5.jpg" alt="Yoga Mat">
+        <h3>Yoga Mat</h3>
+        <div class="price">$39.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-6.jpg" alt="Hiking Boots">
+        <h3>Hiking Boots</h3>
+        <div class="price">$99.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-7.jpg" alt="Kayak">
+        <h3>Kayak</h3>
+        <div class="price">$599.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-8.jpg" alt="Fitness Tracker">
+        <h3>Fitness Tracker</h3>
+        <div class="price">$99.99</div>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-image-9.jpg" alt="Elliptical Machine">
+          <h3>Elliptical Machine</h3>
+          <div class="price">$999.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-10.jpg" alt="Mountain Bike">
+          <h3>Mountain Bike</h3>
+          <div class="price">$799.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-11.jpg" alt="Camping Tent">
+          <h3>Camping Tent</h3>
+          <div class="price">$149.99</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sports-categories">
+      <h2>Sports Categories</h2>
+      <div class="sports-categories-grid">
+        <div class="sports-category">
+          <img src="fitness-icon.png" alt="Fitness">
+          <h3>Fitness</h3>
+          <p>Browse our selection of fitness equipment and accessories.</p>
+        </div>
+        <div class="sports-category">
+          <img src="outdoor-recreation-icon.png" alt="Outdoor Recreation">
+          <h3>Outdoor Recreation</h3>
+          <p>Explore our range of outdoor gear and equipment.</p>
+        </div>
+        <div class="sports-category">
+          <img src="team-sports-icon.png" alt="Team Sports">
+          <h3>Team Sports</h3>
+          <p>Find the perfect gear and equipment for your favorite team sports.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="outdoor-categories">
+      <h2>Outdoor Categories</h2>
+      <div class="outdoor-categories-grid">
+        <div class="outdoor-category">
+          <img src="camping-icon.png" alt="Camping">
+          <h3>Camping</h3>
+          <p>Discover our collection of camping gear and equipment.</p>
+        </div>
+        <div class="outdoor-category">
+          <img src="hiking-icon.png" alt="Hiking">
+          <h3>Hiking</h3>
+          <p>Browse our selection of hiking gear and accessories.</p>
+        </div>
+        <div class="outdoor-category">
+          <img src="water-sports-icon.png" alt="Water Sports">
+          <h3>Water Sports</h3>
+          <p>Explore our range of water sports equipment and gear.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sports-features">
+      <h2>Sports and Outdoors Features</h2>
+      <div class="sports-features-grid">
+        <div class="sports-feature">
+          <img src="high-performance-icon.png" alt="High Performance">
+          <div>
+            <h3>High Performance</h3>
+            <p>Our sports and outdoor products are designed for optimal performance and durability.</p>
+          </div>
+        </div>
+        <div class="sports-feature">
+          <img src="comfort-icon.png" alt="Comfort">
+          <div>
+            <h3>Comfort</h3>
+            <p>We prioritize comfort in our sports and outdoor gear to ensure a pleasant experience.</p>
+          </div>
+        </div>
+        <div class="sports-feature">
+          <img src="versatility-icon.png" alt="Versatility">
+          <div>
+            <h3>Versatility</h3>
+            <p>Our products are designed to be versatile and suitable for a wide range of activities.</p>
+          </div>
+        </div>
+        <div class="sports-feature">
+          <img src="eco-friendly-icon.png" alt="Eco-Friendly">
+          <div>
+            <h3>Eco-Friendly</h3>
+            <p>We offer eco-friendly sports and outdoor products that are sustainable and environmentally conscious.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content (same as previous examples) -->
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

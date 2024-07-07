@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - My Account</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Header and Footer styles (same as previous examples) */
+    /* ... */
+
+    /* Main Content Styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .account-info {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .account-info h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .account-info p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .account-info button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .account-info button:hover {
+      background-color: #8e44ad;
+    }
+
+    .order-history {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .order-history h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .order-item {
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+    }
+
+    .order-item:last-child {
+      border-bottom: none;
+    }
+
+    .order-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .order-item p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .wishlist {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .wishlist h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .wishlist-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+    }
+
+    .wishlist-item:last-child {
+      border-bottom: none;
+    }
+
+    .wishlist-item img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .wishlist-item-details h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .wishlist-item-details p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .wishlist-item-details button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .wishlist-item-details button:hover {
+      background-color: #8e44ad;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content (same as previous examples) -->
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>My Account</h1>
+        <p>Manage your account details, order history, and wishlist.</p>
+      </div>
+      <div class="hero-image">
+        <img src="account-image.jpg" alt="Account">
+      </div>
+    </section>
+
+    <section class="account-info">
+      <h2>Account Information</h2>
+      <p>Name: John Doe</p>
+      <p>Email: johndoe@example.com</p>
+      <p>Address: 123 Main Street, Anytown USA</p>
+      <p>Phone: 555-1234</p>
+      <button>Update Profile</button>
+    </section>
+
+    <section class="order-history">
+      <h2>Order History</h2>
+      <div class="order-item">
+        <h3>Order #12345</h3>
+        <p>Placed on: June 1, 2023</p>
+        <p>Total: $99.99</p>
+        <p>Status: Delivered</p>
+      </div>
+      <div class="order-item">
+        <h3>Order #67890</h3>
+        <p>Placed on: May 15, 2023</p>
+        <p>Total: $49.99</p>
+        <p>Status: Shipped</p>
+      </div>
+      <div class="order-item">
+        <h3>Order #54321</h3>
+        <p>Placed on: April 20, 2023</p>
+        <p>Total: $79.99</p>
+        <p>Status: Delivered</p>
+      </div>
+      <!-- Add more order items here -->
+    </section>
+
+    <section class="wishlist">
+      <h2>Wishlist</h2>
+      <div class="wishlist-item">
+        <img src="product-image-1.jpg" alt="Product 1">
+        <div class="wishlist-item-details">
+          <h3>Product 1</h3>
+          <p>Description of Product 1</p>
+          <p class="price">$19.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="wishlist-item">
+        <img src="product-image-2.jpg" alt="Product 2">
+        <div class="wishlist-item-details">
+          <h3>Product 2</h3>
+          <p>Description of Product 2</p>
+          <p class="price">$29.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="wishlist-item">
+        <img src="product-image-3.jpg" alt="Product 3">
+        <div class="wishlist-item-details">
+          <h3>Product 3</h3>
+          <p>Description of Product 3</p>
+          <p class="price">$39.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <!-- Add more wishlist items here -->
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content (same as previous examples) -->
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

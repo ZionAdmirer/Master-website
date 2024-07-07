@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Toys and Games</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Header and Footer styles (same as previous examples) */
+    /* ... */
+
+    /* Main Content Styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      color: #9b59b6;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #8e44ad;
+    }
+
+    .featured-products {
+      margin-top: 40px;
+    }
+
+    .featured-products h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .featured-products .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .toy-categories {
+      margin-top: 40px;
+    }
+
+    .toy-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .toy-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .toy-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .toy-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .toy-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .toy-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .game-categories {
+      margin-top: 40px;
+    }
+
+    .game-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .game-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .game-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .game-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .game-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .game-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .toy-features {
+      margin-top: 40px;
+    }
+
+    .toy-features h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .toy-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .toy-feature {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .toy-feature img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .toy-feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .toy-feature p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content (same as previous examples) -->
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Toys and Games</h1>
+        <p>Discover a world of endless fun and entertainment.</p>
+      </div>
+      <div class="hero-image">
+        <img src="toys-and-games-image.jpg" alt="Toys and Games">
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="product-image-1.jpg" alt="Plush Toy">
+        <h3>Plush Toy</h3>
+        <div class="price">$19.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-2.jpg" alt="Board Game">
+        <h3>Board Game</h3>
+        <div class="price">$29.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-3.jpg" alt="Action Figure">
+        <h3>Action Figure</h3>
+        <div class="price">$14.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-4.jpg" alt="Building Blocks">
+        <h3>Building Blocks</h3>
+        <div class="price">$24.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-5.jpg" alt="Puzzle">
+        <h3>Puzzle</h3>
+        <div class="price">$12.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-6.jpg" alt="Remote Control Car">
+        <h3>Remote Control Car</h3>
+        <div class="price">$39.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-7.jpg" alt="Craft Kit">
+        <h3>Craft Kit</h3>
+        <div class="price">$17.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-8.jpg" alt="Outdoor Game">
+        <h3>Outdoor Game</h3>
+        <div class="price">$29.99</div>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-image-9.jpg" alt="Robotic Toy">
+          <h3>Robotic Toy</h3>
+          <div class="price">$59.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-10.jpg" alt="Educational Game">
+          <h3>Educational Game</h3>
+          <div class="price">$24.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-11.jpg" alt="Collectible Figure">
+          <h3>Collectible Figure</h3>
+          <div class="price">$39.99</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="toy-categories">
+      <h2>Toy Categories</h2>
+      <div class="toy-categories-grid">
+        <div class="toy-category">
+          <img src="plush-toys-icon.png" alt="Plush Toys">
+          <h3>Plush Toys</h3>
+          <p>Discover our collection of soft and cuddly plush toys.</p>
+        </div>
+        <div class="toy-category">
+          <img src="action-figures-icon.png" alt="Action Figures">
+          <h3>Action Figures</h3>
+          <p>Browse our selection of detailed and posable action figures.</p>
+        </div>
+        <div class="toy-category">
+          <img src="building-toys-icon.png" alt="Building Toys">
+          <h3>Building Toys</h3>
+          <p>Explore our range of construction and building toys.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-categories">
+      <h2>Game Categories</h2>
+      <div class="game-categories-grid">
+        <div class="game-category">
+          <img src="board-games-icon.png" alt="Board Games">
+          <h3>Board Games</h3>
+          <p>Discover our collection of classic and modern board games.</p>
+        </div>
+        <div class="game-category">
+          <img src="puzzles-icon.png" alt="Puzzles">
+          <h3>Puzzles</h3>
+          <p>Browse our selection of challenging and engaging puzzles.</p>
+        </div>
+        <div class="game-category">
+          <img src="outdoor-games-icon.png" alt="Outdoor Games">
+          <h3>Outdoor Games</h3>
+          <p>Explore our range of fun and active outdoor games.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="toy-features">
+      <h2>Toy Features</h2>
+      <div class="toy-features-grid">
+        <div class="toy-feature">
+          <img src="durable-icon.png" alt="Durable">
+          <div>
+            <h3>Durable</h3>
+            <p>Our toys are made with high-quality materials for long-lasting play.</p>
+          </div>
+        </div>
+        <div class="toy-feature">
+          <img src="educational-icon.png" alt="Educational">
+          <div>
+            <h3>Educational</h3>
+            <p>Many of our toys promote learning and skill development.</p>
+          </div>
+        </div>
+        <div class="toy-feature">
+          <img src="safe-icon.png" alt="Safe">
+          <div>
+            <h3>Safe</h3>
+            <p>We prioritize safety in our toy selection to ensure worry-free playtime.</p>
+          </div>
+        </div>
+        <div class="toy-feature">
+          <img src="engaging-icon.png" alt="Engaging">
+          <div>
+            <h3>Engaging</h3>
+            <p>Our toys are designed to capture the imagination and keep children entertained.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content (same as previous examples) -->
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

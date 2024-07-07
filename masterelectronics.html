@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Electronics</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Header and Footer styles (same as previous examples) */
+    /* ... */
+
+    /* Main Content Styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #8e44ad, #2980b9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      color: #8e44ad;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #8e44ad;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #6c3483;
+    }
+
+    .featured-products {
+      margin-top: 40px;
+    }
+
+    .featured-products h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .featured-products .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .electronics-categories {
+      margin-top: 40px;
+    }
+
+    .electronics-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .electronics-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .electronics-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .electronics-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .electronics-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .electronics-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .electronics-features {
+      margin-top: 40px;
+    }
+
+    .electronics-features h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .electronics-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .electronics-feature {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .electronics-feature img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .electronics-feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .electronics-feature p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content (same as previous examples) -->
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Electronics</h1>
+        <p>Discover the latest electronics to enhance your digital life.</p>
+      </div>
+      <div class="hero-image">
+        <img src="electronics-image.jpg" alt="Electronics">
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="product-image-1.jpg" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <div class="price">$699.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-2.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <div class="price">$999.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-3.jpg" alt="Smart TV">
+        <h3>Smart TV</h3>
+        <div class="price">$599.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-4.jpg" alt="Headphones">
+        <h3>Headphones</h3>
+        <div class="price">$149.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-5.jpg" alt="Tablet">
+        <h3>Tablet</h3>
+        <div class="price">$399.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-6.jpg" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <div class="price">$249.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-7.jpg" alt="Speakers">
+        <h3>Speakers</h3>
+        <div class="price">$199.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-8.jpg" alt="Gaming Console">
+        <h3>Gaming Console</h3>
+        <div class="price">$499.99</div>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-image-9.jpg" alt="OLED TV">
+          <h3>OLED TV</h3>
+          <div class="price">$1,499.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-10.jpg" alt="Gaming Laptop">
+          <h3>Gaming Laptop</h3>
+          <div class="price">$1,799.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-11.jpg" alt="Wireless Earbuds">
+          <h3>Wireless Earbuds</h3>
+          <div class="price">$149.99</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="electronics-categories">
+      <h2>Electronics Categories</h2>
+      <div class="electronics-categories-grid">
+        <div class="electronics-category">
+          <img src="computers-icon.png" alt="Computers">
+          <h3>Computers</h3>
+          <p>Browse our selection of laptops, desktops, and tablets for all your computing needs.</p>
+        </div>
+        <div class="electronics-category">
+          <img src="audio-icon.png" alt="Audio">
+          <h3>Audio</h3>
+          <p>Explore our range of headphones, speakers, and audio equipment for an immersive listening experience.</p>
+        </div>
+        <div class="electronics-category">
+          <img src="home-entertainment-icon.png" alt="Home Entertainment">
+          <h3>Home Entertainment</h3>
+          <p>Find the perfect smart TVs, streaming devices, and home theater systems for your entertainment needs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="electronics-features">
+      <h2>Electronics Features</h2>
+      <div class="electronics-features-grid">
+        <div class="electronics-feature">
+          <img src="high-performance-icon.png" alt="High Performance">
+          <div>
+            <h3>High Performance</h3>
+            <p>Our electronics are designed with powerful components for optimal performance and efficiency.</p>
+          </div>
+        </div>
+        <div class="electronics-feature">
+          <img src="smart-features-icon.png" alt="Smart Features">
+          <div>
+            <h3>Smart Features</h3>
+            <p>Many of our electronics come equipped with smart features for convenient and connected living.</p>
+          </div>
+        </div>
+        <div class="electronics-feature">
+          <img src="portability-icon.png" alt="Portability">
+          <div>
+            <h3>Portability</h3>
+            <p>Our portable electronics, such as laptops and smartphones, offer the flexibility to use them on-the-go.</p>
+          </div>
+        </div>
+        <div class="electronics-feature">
+          <img src="immersive-experience-icon.png" alt="Immersive Experience">
+          <div>
+            <h3>Immersive Experience</h3>
+            <p>Our audio and entertainment products provide an immersive and engaging experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content (same as previous examples) -->
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
