@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Fashion</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Header and Footer styles (same as previous examples) */
+    /* ... */
+
+    /* Main Content Styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      color: #9b59b6;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #8e44ad;
+    }
+
+    .featured-products {
+      margin-top: 40px;
+    }
+
+    .featured-products h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .featured-products .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fashion-categories {
+      margin-top: 40px;
+    }
+
+    .fashion-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .fashion-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .fashion-category {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .fashion-category img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .fashion-category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .fashion-category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .fashion-features {
+      margin-top: 40px;
+    }
+
+    .fashion-features h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .fashion-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .fashion-feature {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .fashion-feature img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .fashion-feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .fashion-feature p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content (same as previous examples) -->
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Fashion</h1>
+        <p>Discover the latest fashion trends and styles.</p>
+      </div>
+      <div class="hero-image">
+        <img src="fashion-image.jpg" alt="Fashion">
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="product-image-1.jpg" alt="Dress">
+        <h3>Dress</h3>
+        <div class="price">$59.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-2.jpg" alt="Shirt">
+        <h3>Shirt</h3>
+        <div class="price">$39.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-3.jpg" alt="Jeans">
+        <h3>Jeans</h3>
+        <div class="price">$49.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-4.jpg" alt="Jacket">
+        <h3>Jacket</h3>
+        <div class="price">$79.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-5.jpg" alt="Shoes">
+        <h3>Shoes</h3>
+        <div class="price">$59.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-6.jpg" alt="Accessories">
+        <h3>Accessories</h3>
+        <div class="price">$19.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-7.jpg" alt="Skirt">
+        <h3>Skirt</h3>
+        <div class="price">$39.99</div>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="product-image-8.jpg" alt="Sweater">
+        <h3>Sweater</h3>
+        <div class="price">$49.99</div>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-image-9.jpg" alt="Evening Gown">
+          <h3>Evening Gown</h3>
+          <div class="price">$99.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-10.jpg" alt="Leather Jacket">
+          <h3>Leather Jacket</h3>
+          <div class="price">$129.99</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="product-image-11.jpg" alt="Designer Sunglasses">
+          <h3>Designer Sunglasses</h3>
+          <div class="price">$79.99</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="fashion-categories">
+      <h2>Fashion Categories</h2>
+      <div class="fashion-categories-grid">
+        <div class="fashion-category">
+          <img src="womens-fashion-icon.png" alt="Women's Fashion">
+          <h3>Women's Fashion</h3>
+          <p>Explore our collection of women's clothing, accessories, and footwear.</p>
+        </div>
+        <div class="fashion-category">
+          <img src="mens-fashion-icon.png" alt="Men's Fashion">
+          <h3>Men's Fashion</h3>
+          <p>Browse our selection of men's apparel, shoes, and accessories.</p>
+        </div>
+        <div class="fashion-category">
+          <img src="kids-fashion-icon.png" alt="Kids' Fashion">
+          <h3>Kids' Fashion</h3>
+          <p>Discover stylish and comfortable clothing for children of all ages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fashion-features">
+      <h2>Fashion Features</h2>
+      <div class="fashion-features-grid">
+        <div class="fashion-feature">
+          <img src="trendy-styles-icon.png" alt="Trendy Styles">
+          <div>
+            <h3>Trendy Styles</h3>
+            <p>Our fashion collection features the latest trends and styles to keep you looking fashionable.</p>
+          </div>
+        </div>
+        <div class="fashion-feature">
+          <img src="quality-materials-icon.png" alt="Quality Materials">
+          <div>
+            <h3>Quality Materials</h3>
+            <p>Our clothing is made with high-quality materials for comfort and durability.</p>
+          </div>
+        </div>
+        <div class="fashion-feature">
+          <img src="diverse-sizes-icon.png" alt="Diverse Sizes">
+          <div>
+            <h3>Diverse Sizes</h3>
+            <p>We offer a wide range of sizes to ensure a perfect fit for everyone.</p>
+          </div>
+        </div>
+        <div class="fashion-feature">
+          <img src="ethical-production-icon.png" alt="Ethical Production">
+          <div>
+            <h3>Ethical Production</h3>
+            <p>Our fashion is produced ethically, with a focus on sustainability and fair labor practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content (same as previous examples) -->
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
