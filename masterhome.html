@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Your One-Stop E-Commerce Destination</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background animation */
+    .background-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #9b59b6, #3498db);
+      animation: animateCircle 10s linear infinite;
+    }
+
+    @keyframes animateCircle {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+
+    .circle:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 12%;
+      left: 42%;
+      animation-delay: 0s;
+    }
+
+    .circle:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      top: 70%;
+      left: 10%;
+      animation-delay: 2s;
+    }
+
+    .circle:nth-child(3) {
+      width: 50px;
+      height: 50px;
+      top: 35%;
+      left: 80%;
+      animation-delay: 4s;
+    }
+
+    .circle:nth-child(4) {
+      width: 70px;
+      height: 70px;
+      top: 90%;
+      left: 60%;
+      animation-delay: 6s;
+    }
+
+    .circle:nth-child(5) {
+      width: 90px;
+      height: 90px;
+      top: 20%;
+      left: 20%;
+      animation-delay: 8s;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      font-size: 35px;
+      font-weight: bold;
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #9b59b6;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .search-bar button {
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #8e44ad;
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-actions a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .user-actions a i {
+      margin-right: 5px;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #9b59b6, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #9b59b6;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #8e44ad;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .featured-products,
+    .categories,
+    .why-choose-master {
+      margin-bottom: 40px;
+    }
+
+    .product-grid,
+    .category-grid,
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .product-card,
+    .category-tile,
+    .reason-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img,
+    .category-tile img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .reason-card i {
+      font-size: 24px;
+      color: #9b59b6;
+      margin-bottom: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .footer-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .footer-content p,
+    .footer-content ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-content ul {
+      list-style-type: none;
+    }
+
+    .footer-content ul li {
+      margin-bottom: 5px;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-animation">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="masterabout.html">Master</a>
+      </div>
+      <ul>
+        <li><a href="mastercategories.html">Categories</a></li>
+        <li><a href="masterdeals.html">Deals</a></li>
+        <li><a href="mastersellonmaster.html">Sell on Master</a></li>
+        <li><a href="mastercustomerservice.html">Customer Service</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+      </div>
+      <div class="user-actions">
+        <a href="mastercart.html" class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+        </a>
+        <a href="masteraccount.html" class="account">
+          <i class="fas fa-user"></i>
+          <span>Account</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to <span class="gradient-text">Master</span></h1>
+        <p>Discover a world of endless possibilities. Shop from a vast selection of products and enjoy seamless shopping experiences.</p>
+        <a href="mastershopping.html" class="cta">Shop Now</a>
+      </div>
+      <div class="hero-image">
+        <!-- <img src="" alt="Master E-Commerce"> -->
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-image-1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="product-image-2.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="product-image-3.jpg" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+          <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <!-- Add more product cards here -->
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <a href="#" class="category-tile">
+          <img src="category-image-1.jpg" alt="Category 1">
+          <h3>Category 1</h3>
+        </a>
+        <a href="#" class="category-tile">
+          <img src="category-image-2.jpg" alt="Category 2">
+          <h3>Category 2</h3>
+        </a>
+        <a href="#" class="category-tile">
+          <img src="category-image-3.jpg" alt="Category 3">
+          <h3>Category 3</h3>
+        </a>
+        <!-- Add more category tiles here -->
+      </div>
+    </section>
+
+    <section class="why-choose-master">
+      <h2>Why Choose Master?</h2>
+      <div class="reason-grid">
+        <div class="reason-card">
+          <i class="fas fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p>Experience lightning-fast shipping to your doorstep.</p>
+        </div>
+        <div class="reason-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure Payments</h3>
+          <p>Rest assured with our robust security measures.</p>
+        </div>
+        <div class="reason-card">
+          <i class="fas fa-tags"></i>
+          <h3>Unbeatable Deals</h3>
+          <p>Discover the best prices and exclusive discounts.</p>
+        </div>
+        <div class="reason-card">
+          <i class="fas fa-headset"></i>
+          <h3>Exceptional Support</h3>
+          <p>Our dedicated team is here to assist you 24/7.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about">
+        <h3>About Master</h3>
+        <p>Master is your one-stop e-commerce destination, offering a wide range of products and exceptional shopping experiences.
+          At Master, we believe that online shopping should be more than just a transaction – it should be a journey filled with discovery, delight, and a sense of community. Our vision is to create a platform that not only meets the needs of our customers but also exceeds their expectations, empowering them to find the perfect products and enjoy the shopping process.
+        </p>
+      </div>
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <!-- <li><a href="#">Home</a></li> -->
+          <!-- <li><a href="#">Categories</a></li> -->
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Sell on Master</a></li>
+          <li><a href="#">Customer Service</a></li>
+          <li><a href="mastertermsandservices.html">Terms and Services</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <p>Email: heyobsidian93@gmail.com</p>
+        <p>Phone: +91 9776194201</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 Master. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  <script>
+    window.onload = function() {
+      // window.scrollTo(-80, -80);
+      window.onload = function () {window.location.reload()}
+    };
+  </script>
+
+</body>
+</html>
